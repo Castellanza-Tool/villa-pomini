@@ -218,6 +218,23 @@ dialog.lente::backdrop{background:rgba(240,241,237,.96)}
 .lente p{text-align:center;font-size:.9375rem;color:var(--sumi);margin:1rem 0 0}
 .lente button{position:fixed;top:1rem;right:1rem;background:var(--sumi);color:#fff;border:0;padding:.5rem 1rem;font:inherit;cursor:pointer}
 </style>
+<!-- Web Analytics Italia (Matomo) - sito "Siti tematici Comune", codice valido per tutti i sottodomini tematici -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['disableCookies']);
+  _paq.push(['setDocumentTitle', document.domain + ' / ' + document.title]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://ingestion.webanalytics.italia.it/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '47578']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
 </head>
 <body>
 <a class="salta" href="#contenuto">Vai al contenuto</a>
@@ -553,7 +570,7 @@ dialog.lente::backdrop{background:rgba(240,241,237,.96)}
     <p><a href="https://www.comune.castellanza.va.it/">Sito del Comune</a></p>
     <p><a href="https://www.comune.castellanza.va.it/vivere-il-comune/luoghi/dettaglio-luogo/Villa-Pomini/">Villa Pomini sul sito del Comune</a></p>
     <p><a href="https://www.comune.castellanza.va.it/info-e-contatti/privacy/privacy/">Informativa privacy</a> · <a href="https://www.comune.castellanza.va.it/info-e-contatti/privacy/cookies/">Cookie</a> · <a href="https://www.comune.castellanza.va.it/info-e-contatti/privacy/note-legali/">Note legali</a></p>
-    <p class="nota-cookie">Questa pagina non usa cookie né servizi di terze parti.</p>
+    <p class="nota-cookie">Questa pagina non usa cookie. Le visite sono conteggiate in forma anonima con Web Analytics Italia, la piattaforma statistica di AgID per la pubblica amministrazione.</p>
   </div>
 </footer>
 
