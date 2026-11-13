@@ -631,7 +631,15 @@ document.querySelectorAll('.seguito[data-leggi]').forEach(function(box,i){
 document.querySelectorAll('.avvia-video').forEach(function(b){
   b.addEventListener('click',function(){
     var f=document.createElement('iframe');
-    f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.youtube+'?autoplay=1&playsinline=1&rel=0';
+    f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.youtube+'?autoplay=1&playsinline=1&rel=0&cc_load_policy=0&enablejsapi=1&origin='+encodeURIComponent(location.origin);
+    f.addEventListener('load',function(){
+      /* niente sottotitoli automatici di YouTube: le scritte sono già nel video */
+      var n=0,t=setInterval(function(){
+        f.contentWindow.postMessage(JSON.stringify({event:'listening',id:1}),'*');
+        f.contentWindow.postMessage(JSON.stringify({event:'command',func:'unloadModule',args:['captions']}),'*');
+        if(++n>12)clearInterval(t);
+      },500);
+    });
     f.title=b.getAttribute('aria-label').replace('Guarda il video: ','');
     f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
     f.allowFullscreen=true;
