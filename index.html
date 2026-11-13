@@ -142,6 +142,16 @@ html:not(.bozza) [data-in-arrivo],html:not(.bozza) .segnaposto{display:none}
 .rotolo-video .cornice{padding:.8rem}
 .schermo{aspect-ratio:9/16;background:var(--velo);display:grid;place-items:center;color:var(--ai);font-size:.875rem;text-align:center;padding:1.5rem}
 .schermo video{width:100%;height:100%;object-fit:cover;display:block}
+.schermo:has(.avvia-video),.schermo:has(iframe){padding:0;background:#000}
+.avvia-video{all:unset;cursor:pointer;position:relative;display:block;width:100%;height:100%}
+.avvia-video img{width:100%;height:100%;object-fit:cover;display:block}
+.tasto-play{position:absolute;left:50%;bottom:calc(9.85% - 1.6rem);width:3.2rem;height:3.2rem;margin-left:-1.6rem;border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .2s}
+.tasto-play::after{content:"";position:absolute;left:52%;top:50%;transform:translate(-40%,-50%);border-style:solid;border-width:.6rem 0 .6rem 1rem;border-color:transparent transparent transparent var(--verdone)}
+.avvia-video:hover .tasto-play{transform:scale(1.08)}
+.avvia-video:focus-visible{outline:3px solid var(--ai);outline-offset:3px}
+.schermo iframe{width:100%;height:100%;border:0;display:block}
+.nota-video{font-size:.8125rem;color:var(--pietra);margin-top:1.5rem}
+@media (max-width:640px){.rotoli{justify-content:center}}
 .rotolo-video figcaption{margin-top:1rem;font-size:.9375rem;line-height:1.55}
 .rotolo-video figcaption span{display:block;color:var(--pietra);font-size:.875rem}
 
@@ -194,7 +204,9 @@ html:not(.bozza) [data-in-arrivo],html:not(.bozza) .segnaposto{display:none}
 @media (max-width:560px){.crediti dl{grid-template-columns:1fr}.crediti dd{margin-bottom:.6rem}}
 
 /* ---------- piede ---------- */
-.piede{background:var(--verdone);color:#E6E8E4;padding:3rem var(--margine);font-size:.875rem;display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.piede{background:var(--verdone);color:#E6E8E4;padding:3rem var(--margine) 2rem;font-size:.875rem;display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.link-piede p{margin:0 0 .55rem}
+.link-piede p:last-child{margin-bottom:0}
 .piede a{color:#fff}
 .piede p{margin:0 0 .4rem}
 
@@ -211,7 +223,7 @@ html:not(.bozza) [data-in-arrivo],html:not(.bozza) .segnaposto{display:none}
 .ente-piede p{margin-bottom:.25rem;line-height:1.6}
 .ente-piede p:last-child{margin-bottom:0}
 .ente-piede img{width:52px;height:auto;flex:none}
-.nota-cookie{font-size:.8125rem;color:#BFD3D0}
+.piede .nota-cookie{flex-basis:100%;margin:1.5rem 0 0;font-size:.75rem;color:#BFD3D0;text-align:center}
 /* ---------- ingrandimento ---------- */
 dialog.lente{border:0;padding:0;background:transparent;max-width:min(92vw,70rem);max-height:92vh}
 dialog.lente::backdrop{background:rgba(240,241,237,.96)}
@@ -289,6 +301,7 @@ dialog.lente::backdrop{background:rgba(240,241,237,.96)}
   <nav aria-label="Sezioni della pagina">
     <ul>
       <li><a href="#mostra">La mostra</a></li>
+      <li><a href="#video">I video</a></li>
       <li><a href="#eventi">Gli eventi</a></li>
       <li><a href="#visita">La visita</a></li>
       <li><a href="https://www.comune.castellanza.va.it/">Città di Castellanza</a></li>
@@ -383,23 +396,24 @@ dialog.lente::backdrop{background:rgba(240,241,237,.96)}
   </div>
 </section>
 
-<section class="sezione" id="video" aria-labelledby="h-video" data-rinviato>
+<section class="sezione" id="video" aria-labelledby="h-video">
   <h2 id="h-video">I video</h2>
   <div class="corpo larga">
     <div class="rotoli">
       <figure class="rotolo-video">
         <div class="asta"></div>
-        <div class="cornice"><div class="schermo">Video in arrivo</div></div>
+        <div class="cornice"><div class="schermo"><button type="button" class="avvia-video" data-youtube="cfTaKBq1rT4" aria-label="Guarda il video: L'allestimento della mostra"><img src="video/copertina-locandina.jpg" alt="" width="720" height="1280" loading="lazy"><span class="tasto-play" aria-hidden="true"></span></button><noscript><a href="https://youtube.com/shorts/cfTaKBq1rT4">Guarda il video su YouTube</a></noscript></div></div>
         <div class="asta"></div>
-        <figcaption>L'allestimento raccontato dall'assessore alla Cultura Davide Tarlazzi<span>Durata da definire</span></figcaption>
+        <figcaption>L'allestimento della mostra</figcaption>
       </figure>
-      <figure class="rotolo-video">
+      <figure class="rotolo-video" data-rinviato>
         <div class="asta"></div>
         <div class="cornice"><div class="schermo">Video in arrivo</div></div>
         <div class="asta"></div>
         <figcaption>L'invito alla città<span>Durata da definire</span></figcaption>
       </figure>
     </div>
+    <p class="nota-video">Il video è ospitato su YouTube e viene caricato solo quando avvii la riproduzione.</p>
   </div>
 </section>
 
@@ -568,12 +582,12 @@ dialog.lente::backdrop{background:rgba(240,241,237,.96)}
     <p>Ufficio Cultura, tel. 0331 526263</p>
     </div>
   </div>
-  <div>
+  <div class="link-piede">
     <p><a href="https://www.comune.castellanza.va.it/">Sito del Comune</a></p>
     <p><a href="https://www.comune.castellanza.va.it/vivere-il-comune/luoghi/dettaglio-luogo/Villa-Pomini/">Villa Pomini sul sito del Comune</a></p>
     <p><a href="https://www.comune.castellanza.va.it/info-e-contatti/privacy/privacy/">Informativa privacy</a> · <a href="https://www.comune.castellanza.va.it/info-e-contatti/privacy/cookies/">Cookie</a> · <a href="https://www.comune.castellanza.va.it/info-e-contatti/privacy/note-legali/">Note legali</a></p>
-    <p class="nota-cookie">Questa pagina non usa cookie. Le visite sono conteggiate in forma anonima con Web Analytics Italia, la piattaforma statistica di AgID per la pubblica amministrazione.</p>
   </div>
+  <p class="nota-cookie">Questa pagina non usa cookie. I video sono ospitati su YouTube e vengono caricati solo se avvii la riproduzione. Le visite sono conteggiate in forma anonima con Web Analytics Italia, la piattaforma statistica di AgID per la pubblica amministrazione.</p>
 </footer>
 
 <dialog class="lente" aria-label="Opera ingrandita">
@@ -612,6 +626,24 @@ document.querySelectorAll('.seguito[data-leggi]').forEach(function(box,i){
   d.querySelector('[data-chiudi]').addEventListener('click',function(){d.close()});
   d.addEventListener('click',function(e){if(e.target===d)d.close()});
 })();
+document.querySelectorAll('.avvia-video').forEach(function(b){
+  b.addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.youtube+'?autoplay=1&playsinline=1&rel=0&cc_load_policy=0&enablejsapi=1&origin='+encodeURIComponent(location.origin);
+    f.addEventListener('load',function(){
+      /* niente sottotitoli automatici di YouTube: le scritte sono già nel video */
+      var n=0,t=setInterval(function(){
+        f.contentWindow.postMessage(JSON.stringify({event:'listening',id:1}),'*');
+        f.contentWindow.postMessage(JSON.stringify({event:'command',func:'unloadModule',args:['captions']}),'*');
+        if(++n>12)clearInterval(t);
+      },500);
+    });
+    f.title=b.getAttribute('aria-label').replace('Guarda il video: ','');
+    f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+    f.allowFullscreen=true;
+    b.replaceWith(f);
+  });
+});
 </script>
 </body>
 </html>
