@@ -206,7 +206,9 @@ html:not(.bozza) [data-in-arrivo],html:not(.bozza) .segnaposto{display:none}
 @media (max-width:560px){.crediti dl{grid-template-columns:1fr}.crediti dd{margin-bottom:.6rem}}
 
 /* ---------- piede ---------- */
-.piede{background:var(--verdone);color:#E6E8E4;padding:3rem var(--margine);font-size:.875rem;display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.piede{background:var(--verdone);color:#E6E8E4;padding:3rem var(--margine) 2rem;font-size:.875rem;display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.link-piede p{margin:0 0 .55rem}
+.link-piede p:last-child{margin-bottom:0}
 .piede a{color:#fff}
 .piede p{margin:0 0 .4rem}
 
@@ -223,7 +225,7 @@ html:not(.bozza) [data-in-arrivo],html:not(.bozza) .segnaposto{display:none}
 .ente-piede p{margin-bottom:.25rem;line-height:1.6}
 .ente-piede p:last-child{margin-bottom:0}
 .ente-piede img{width:52px;height:auto;flex:none}
-.nota-cookie{font-size:.8125rem;color:#BFD3D0}
+.piede .nota-cookie{flex-basis:100%;margin:1.5rem 0 0;font-size:.75rem;color:#BFD3D0;text-align:center}
 /* ---------- ingrandimento ---------- */
 dialog.lente{border:0;padding:0;background:transparent;max-width:min(92vw,70rem);max-height:92vh}
 dialog.lente::backdrop{background:rgba(240,241,237,.96)}
@@ -582,12 +584,12 @@ dialog.lente::backdrop{background:rgba(240,241,237,.96)}
     <p>Ufficio Cultura, tel. 0331 526263</p>
     </div>
   </div>
-  <div>
+  <div class="link-piede">
     <p><a href="https://www.comune.castellanza.va.it/">Sito del Comune</a></p>
     <p><a href="https://www.comune.castellanza.va.it/vivere-il-comune/luoghi/dettaglio-luogo/Villa-Pomini/">Villa Pomini sul sito del Comune</a></p>
     <p><a href="https://www.comune.castellanza.va.it/info-e-contatti/privacy/privacy/">Informativa privacy</a> · <a href="https://www.comune.castellanza.va.it/info-e-contatti/privacy/cookies/">Cookie</a> · <a href="https://www.comune.castellanza.va.it/info-e-contatti/privacy/note-legali/">Note legali</a></p>
-    <p class="nota-cookie">Questa pagina non usa cookie. I video sono ospitati su YouTube e vengono caricati solo se avvii la riproduzione. Le visite sono conteggiate in forma anonima con Web Analytics Italia, la piattaforma statistica di AgID per la pubblica amministrazione.</p>
   </div>
+  <p class="nota-cookie">Questa pagina non usa cookie. I video sono ospitati su YouTube e vengono caricati solo se avvii la riproduzione. Le visite sono conteggiate in forma anonima con Web Analytics Italia, la piattaforma statistica di AgID per la pubblica amministrazione.</p>
 </footer>
 
 <dialog class="lente" aria-label="Opera ingrandita">
