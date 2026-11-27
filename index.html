@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Segno gesto e materia | Villa Pomini, Castellanza</title>
-<meta name="description" content="Mostra a Villa Pomini, Castellanza. Inaugurazione sabato 21 novembre 2026.">
+<meta name="description" content="Mostra a Villa Pomini, Castellanza. Aperta fino al 10 gennaio 2027, ingresso gratuito.">
 <!-- Web Analytics Italia: qui andrà il codice di tracciamento del sito tematico -->
 <style>
 @font-face{font-family:"Shippori Mincho";src:url(fonts/shippori-mincho-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
@@ -59,6 +59,8 @@ img{max-width:100%;display:block}
 .titolo h1{font-family:var(--stampatello);font-weight:700;text-transform:uppercase;color:var(--verdone);font-size:clamp(3.4rem,8vw,7rem);line-height:.92;letter-spacing:.005em;margin:0}
 .titolo .sottotitolo{font-family:var(--stampatello);font-weight:600;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(1.3rem,2.3vw,1.85rem);line-height:1.15;margin:1rem 0 2.25rem;max-width:28rem;color:var(--sumi)}
 .data{font-size:clamp(1.05rem,1.6vw,1.25rem);font-weight:500;margin:0}
+.apertura .data{line-height:1.45}
+.orari{font-family:var(--stampatello);font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(.95rem,1.3vw,1.1rem);color:var(--ai);margin:0 0 .35rem}
 .dove{margin:.3rem 0 0;color:var(--pietra)}
 .manifesto{display:flex;flex-direction:column;align-items:center;margin:0}
 .manifesto figcaption{width:min(100%,22rem);margin-top:.9rem;font-size:.75rem;line-height:1.5;color:var(--pietra)}
@@ -167,6 +169,8 @@ html:not(.bozza) [data-in-arrivo],html:not(.bozza) .segnaposto{display:none}
 
 #visita .corpo{background:var(--supporto);border:2px solid var(--verdone);padding:clamp(1.25rem,3vw,2.25rem);max-width:46rem}
 #visita .scheda{border-top:0}
+.scarica{font-weight:500}
+.peso{font-size:.875rem;color:var(--pietra)}
 #visita .scheda dd:last-of-type,#visita .scheda dt:last-of-type{border-bottom:0}
 .colophon{margin:2.5rem 0 0;display:grid;grid-template-columns:minmax(10rem,15rem) 1fr;border-top:2px solid var(--azzurro);font-size:.9375rem}
 .colophon dt,.colophon dd{margin:0;padding:.75rem 0;border-bottom:1px solid var(--filo)}
@@ -186,6 +190,8 @@ html:not(.bozza) [data-in-arrivo],html:not(.bozza) .segnaposto{display:none}
 .eventi p.sotto{color:var(--sumi);margin-bottom:.35rem}
 .eventi time small{text-transform:none}
 .capitolo{font-family:var(--stampatello);font-weight:700;text-transform:uppercase;letter-spacing:.02em;color:var(--ai);font-size:1.35rem;line-height:1.15;margin:2.5rem 0 .9rem}
+.eventi a.scopri{font-weight:500;white-space:nowrap}
+.eventi a.scopri::after{content:" →"}
 .nota-eventi{margin:1.25rem 0 0;font-size:.875rem;color:var(--pietra)}
 /* ---------- diario ---------- */
 .diario{list-style:none;margin:0;padding:0;border-left:2px solid var(--azzurro)}
@@ -317,7 +323,8 @@ dialog.lente::backdrop{background:rgba(240,241,237,.96)}
     <p class="dono">La donazione Ottorino Luciano Pomini</p>
     <h1 id="titolo-mostra">Segno<br>gesto<br>e materia</h1>
     <p class="sottotitolo">nella pittura giapponese<br>del II dopoguerra 1958-1960</p>
-    <p class="data">Inaugurazione sabato 21 novembre 2026, ore 17</p>
+    <p class="orari">Orari di apertura</p>
+    <p class="data">Sabato dalle 15 alle 18.30<br>Domenica dalle 10 alle 12 e dalle 15 alle 18.30</p>
     <p class="dove">Villa Pomini, via don Luigi Testori 14, Castellanza</p>
   </div>
   <figure class="manifesto">
@@ -337,10 +344,15 @@ dialog.lente::backdrop{background:rgba(240,241,237,.96)}
 <section class="sezione" id="mostra" aria-labelledby="h-mostra">
   <h2 id="h-mostra">La mostra</h2>
   <div class="corpo">
-    <p>Otto dipinti di sei grandi artisti giapponesi del secondo dopoguerra tornano a Villa Pomini dopo il restauro conservativo. Fanno parte della donazione che l'industriale e collezionista Ottorino Luciano Pomini <span class="nw">(1921-1987)</span> fece al Comune di Castellanza nel 1983 e trovano ora posto in un allestimento permanente, pensato per valorizzarli nel luogo in cui il collezionista li aveva custoditi.</p>
+    <p>Aprirà al pubblico domenica 22 novembre «SEGNO GESTO E MATERIA nella pittura giapponese del II dopoguerra 1958-1960». L'esposizione riporta a Villa Pomini otto quadri di sei artisti giapponesi, che Ottorino Luciano Pomini <span class="nw">(1921-1987)</span> donò al Comune di Castellanza nel 1983. Dopo il restauro conservativo, le opere saranno presentate per la prima volta al pubblico in un allestimento permanente, pensato per valorizzarle nel luogo in cui il collezionista le custodiva. La mostra si potrà visitare con ingresso gratuito fino al 10 gennaio 2027. Tra novembre e dicembre, quattro appuntamenti ne racconteranno la storia, il restauro e il contesto artistico.</p>
     <div class="seguito" data-leggi>
-      <p>Gli autori sono Imai Toshimitsu <span class="nw">(1928-2002)</span>, Motonaga Sadamasa <span class="nw">(1922-2011)</span>, Kuno Shin <span class="nw">(1921-1998)</span>, Kawabata Minoru <span class="nw">(1911-2001)</span>, Abe Nobuya <span class="nw">(1913-1971)</span> e Dōmoto Inshō <span class="nw">(1891-1975)</span>. Pomini intercettò le loro opere attraverso i principali circuiti artistici del Nord Italia proprio negli anni in cui questi pittori si affermavano in Occidente, e ne nacque una precoce campionatura della pluralità dell'arte giapponese di quel periodo.</p>
-      <p>Per la prima volta il pubblico può vedere questi quadri riuniti. La mostra restituisce alla comunità e al territorio un patrimonio artistico di caratura internazionale, non comune nelle collezioni pubbliche italiane, e riaccende i riflettori su un collezionista lombardo che merita di essere riscoperto.</p>
+      <p>I dipinti esposti sono di Imai Toshimitsu <span class="nw">(1928-2002)</span>, Motonaga Sadamasa <span class="nw">(1922-2011)</span>, Kuno Shin <span class="nw">(1921-1998)</span>, Kawabata Minoru <span class="nw">(1911-2001)</span>, Abe Nobuya <span class="nw">(1913-1971)</span> e Dōmoto Inshō <span class="nw">(1891-1975)</span>. Fanno parte della più ampia donazione di opere d'arte che Pomini fece alla Città di Castellanza.</p>
+      <p>La mostra mette in luce anche la figura del collezionista lombardo. Pomini acquisì questi quadri attraverso i principali circuiti artistici del Nord Italia proprio negli anni in cui i loro autori si affermavano in Occidente. Ne è nata una precoce campionatura della pluralità dell'arte giapponese di quel periodo, oggi patrimonio della comunità castellanzese e non comune nelle collezioni pubbliche italiane.</p>
+      <p>La curatela della mostra è di Davide Tarlazzi affiancato da Giulia Briguori, autori anche degli apparati didattici e del catalogo che verrà pubblicato da “Nomos Edizioni”. Il restauro è stato eseguito dallo “Studio di restauro Isabella Pirola” di Vanzaghello. Il progetto espositivo, grafico e illuminotecnico porta la firma dell'architetto Gianni Fiore che ha recentemente allestito la mostra «Giovanni Gastel. Rewind» a Palazzo Citterio in Milano, mentre l'allestimento è stato realizzato da “Gobbo Allestimenti” di Legnano. L'iniziativa rientra nel progetto «Villa Pomini Lab. Patrimonio, comunità, giovani e storytelling», finanziato da Regione Lombardia. Ciò ha permesso di produrre a servizio dei visitatori 16 podcast dedicati (in italiano, inglese e spagnolo) realizzati da Loquis-Georadio. Oltre a quello regionale, la mostra gode del patrocinio del Consolato Generale del Giappone a Milano (l'esposizione rientra tra gli eventi che celebrano il 160° anniversario delle relazioni diplomatiche fra Italia e Giappone), della Provincia di Varese e di Fondazione Varese Welcome.</p>
+      <p>Fino al 10 gennaio la villa sarà aperta il sabato dalle 15 alle 18,30 e la domenica dalle 10 alle 12 e dalle 15 alle 18,30. Sono previste due aperture straordinarie, martedì 8 dicembre e mercoledì 6 gennaio, dalle 15 alle 18,30. Le sale si trovano al piano terra, raggiungibile con una scalinata dotata di montascale.</p>
+      <p>Il programma degli incontri di approfondimento prenderà il via proprio domenica 22 novembre, alle 17, con «Studiare restaurare ed esporre», dedicato alla valorizzazione dei quadri. Interverranno Davide Tarlazzi, Isabella Pirola e Gianni Fiore. Domenica 29 novembre, sempre alle 17, Paolo Linetti, direttore del Museo d'Arte Orientale “Mazzocchi” di Coccaglio, in provincia di Brescia, terrà l'incontro «Il tramonto del mondo fluttuante è a Occidente». A dicembre la parola passerà ai giovani con «Villa Pomini tra storia e innovazione». Sabato 5, alle 15, le classi del Liceo Artistico “Paolo Candiani” di Busto Arsizio presenteranno insieme ai docenti la loro ricerca e i loro progetti che hanno reso Villa Pomini un caso studio multidisciplinare. Domenica 6, dalle 15 alle 18,30, saranno gli stessi studenti a guidare i visitatori alla scoperta della loro mostra didattica.</p>
+      <p>«Con l'inaugurazione di questa mostra permanente condividiamo con il pubblico l'esito dei restauri alle opere e le conoscenze emerse dallo studio su Pomini e sui suoi quadri giapponesi – sottolinea Davide Tarlazzi, assessore alla Cultura e Istruzione del Comune di Castellanza –. Per valorizzare al meglio questa riscoperta, l'allestimento, contrassegnato da una nobile semplicità, è accompagnato da una serie di podcast che connettono il patrimonio di Villa Pomini alla comunità e ai visitatori. Un servizio di storytelling che trasforma l'esperienza di visita e mette il pubblico al centro. Sogno che questa restituzione, promossa dal Comune con propri fondi, apra a nuovi progetti, alla nascita di partenariati e collaborazioni utili per valorizzare il collezionismo di Ottorino Luciano Pomini. Questa visione di crescita culturale può essere importante per il nostro territorio e per costruire nuovi capitoli della storia di Villa Pomini. In questo senso il coinvolgimento di circa 60 studenti del Liceo di Busto Arsizio in questo laboratorio culturale mi pare un segnale promettente».</p>
+      <p>Per il sindaco di Castellanza, Cristina Borroni, «un patrimonio diventa davvero pubblico solo quando la comunità lo conosce e lo sente proprio. Nel 1983 Ottorino Luciano Pomini compì un gesto disinteressato, affidando alla Città opere scelte negli stessi anni in cui quegli artisti si affermavano in Occidente. Restituirle al pubblico, restaurate e accessibili a tutti, significa dimostrare che quella fiducia era ben riposta. Questa mostra porta inoltre il nome di Castellanza oltre i confini cittadini. Il patrocinio del Consolato Generale del Giappone a Milano e l'inserimento tra gli eventi per il 160° anniversario delle relazioni diplomatiche fra Italia e Giappone ci collocano in un dialogo culturale internazionale. Il sostegno di Regione Lombardia e il patrocinio della Provincia di Varese e della Fondazione Varese Welcome confermano che la cultura cresce in rete, non in solitudine. Villa Pomini non è soltanto una sede espositiva – conclude il primo cittadino –: è la testimonianza di una Città che conserva la propria memoria e sceglie di condividerla».</p>
     </div>
     <dl class="colophon">
       <dt>Esposizione permanente<br>promossa da</dt><dd>Città di Castellanza</dd>
@@ -472,7 +484,7 @@ dialog.lente::backdrop{background:rgba(240,241,237,.96)}
         <time datetime="2026-11-29T17:00">29 nov<small>domenica, ore 17</small></time>
         <div>
           <h3>Il tramonto del mondo fluttuante è a Occidente</h3>
-          <p>Con Paolo Linetti, direttore del Museo d'Arte Orientale «Mazzocchi» di Coccaglio (Brescia)</p>
+          <p>Con Paolo Linetti, direttore del Museo d'Arte Orientale «Mazzocchi» di Coccaglio (Brescia). <a class="scopri" href="incontro-29-novembre/">Scopri di più</a></p>
         </div>
       </li>
     </ol>
@@ -517,7 +529,7 @@ dialog.lente::backdrop{background:rgba(240,241,237,.96)}
       <dt>Informazioni</dt>
       <dd>Ufficio Cultura del Comune di Castellanza<br>tel. 0331 526263<br><a href="mailto:cultura@comune.castellanza.va.it">cultura@comune.castellanza.va.it</a></dd>
       <dt>Ufficio stampa</dt>
-      <dd>Stefano Morelli<br><a href="mailto:ufficiostampa@comune.castellanza.va.it">ufficiostampa@comune.castellanza.va.it</a></dd>
+      <dd>Stefano Morelli<br><a href="mailto:ufficiostampa@comune.castellanza.va.it">ufficiostampa@comune.castellanza.va.it</a><br><a class="scarica" href="stampa/cartella-stampa-segno-gesto-e-materia.pdf" download>Scarica la cartella stampa</a> <span class="peso">(PDF, 3,5 MB)</span></dd>
     </dl>
   </div>
 </section>
